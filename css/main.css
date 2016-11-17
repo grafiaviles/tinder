@@ -1,0 +1,278 @@
+/* Background Color */
+/* Background Color */
+/* Width */
+/* Type */
+/* Border Radius */
+/* Border Box */
+/* Flex Box */
+/* Box Shadow */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif; }
+
+body {
+  background-color: #323232;
+  font-size: 16px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit- flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  min-height: 100vh; }
+
+header, section, article, aside, div, nav, footer, hgroup, figure, menu, main, summary, figcaption, img {
+  display: block; }
+
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  transition: all .4s ease;
+  color: white;
+  cursor: pointer; }
+
+main {
+  width: 90%;
+  max-width: 400px;
+  min-width: 300px;
+  clear: both;
+  position: relative; }
+  main .box {
+    width: 100%;
+    display: -webkit- flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #323232;
+    /* Imagen Interactiva */
+    /* Botones */ }
+    main .box figure {
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      overflow: hidden;
+      background-color: white; }
+      main .box figure img {
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        height: 100%; }
+    main .box .botones {
+      width: 100%;
+      padding: 2em 1em;
+      background-color: #E82146; }
+      main .box .botones a {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 0 white;
+        font-size: 1.5em;
+        display: inline-block;
+        padding: 1em;
+        outline: none;
+        border-radius: 50%;
+        transition: all .4s ease; }
+      main .box .botones a:first-child {
+        margin-right: 1em; }
+      main .box .botones .hover-bottom {
+        background-color: transparent;
+        box-shadow: 0 0 0 2px white;
+        transition: all .4s ease; }
+      main .box .botones .active {
+        background-color: white;
+        color: #E82146;
+        transform: scale(0.9); }
+
+h1 {
+  color: #f8f8f8;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center; }
+
+footer {
+  background: transparent;
+  clear: both;
+  font-size: 10px;
+  text-align: center;
+  padding: 3em 0.5em 1em 0.5em; }
+
+.tinderesque .list .card {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d; }
+
+.tinderesque .list .current {
+  display: block;
+  z-index: 30; }
+
+.tinderesque .cardcontainer.yes .card {
+  -webkit-animation: none;
+  animation: none; }
+
+.tinderesque .cardcontainer.nope .card {
+  -webkit-animation: none;
+  animation: none; }
+
+.tinderesque .cardcontainer.yes .current {
+  -webkit-animation: yay 0.7s ease-out;
+  animation: yay 0.7s ease-out; }
+
+.tinderesque .cardcontainer.nope .current {
+  -webkit-animation: nope 0.7s ease-out;
+  animation: nope 0.7s ease-out; }
+
+.cardlist li {
+  z-index: 1; }
+
+.cardlist li:nth-child(0) {
+  z-index: 5; }
+
+.cardlist li:nth-child(1) {
+  z-index: 4; }
+
+.cardlist li:nth-child(2) {
+  z-index: 3; }
+
+.cardlist li:nth-child(even) {
+  transform: rotate(10deg);
+  top: 8px;
+  transition: 0.4s; }
+
+.cardlist li:nth-child(3n) {
+  transform: rotate(-8deg);
+  top: -8px;
+  transition: 0.4s; }
+
+.cardlist li:nth-child(5n) {
+  transform: rotate(7deg);
+  top: -13px;
+  transition: 0.4s; }
+
+.card {
+  color: #000;
+  width: 250px;
+  height: 300px;
+  transition: 0.4s;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); }
+
+.current {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8); }
+
+.cardcontainer {
+  width: 250px;
+  position: relative;
+  margin: 0 auto; }
+
+.list ul.cardlist {
+  position: relative;
+  margin: 0 0 40px 0;
+  height: 300px; }
+
+img {
+  display: block; }
+
+.cardcontainer button.but-nope, .cardcontainer button.but-yay {
+  z-index: 10; }
+
+.cardcontainer button.but-nope {
+  background: firebrick; }
+
+.cardcontainer button.but-yay {
+  background: seagreen; }
+
+.but-nope::after {
+  content: 'nope';
+  position: absolute;
+  top: -35px;
+  left: -150px;
+  font-size: 30px;
+  transform: rotate(-30deg);
+  background: firebrick;
+  padding: .2em .4em;
+  color: #fff;
+  display: block;
+  transition: 0.4s;
+  opacity: 0; }
+
+.but-nope:hover::after {
+  opacity: 1;
+  top: 100px; }
+
+.but-yay::after {
+  content: 'yep';
+  position: absolute;
+  top: -35px;
+  right: -150px;
+  font-size: 30px;
+  background: seagreen;
+  color: #fff;
+  padding: .2em .4em;
+  transform: rotate(30deg);
+  display: block;
+  transition: 0.4s;
+  opacity: 0; }
+
+.but-yay:hover::after {
+  opacity: 1;
+  top: 100px; }
+
+#results {
+  opacity: 0;
+  position: absolute;
+  top: -20000px;
+  transition: opacity 0.5s;
+  margin: 0;
+  padding: 0; }
+
+#results li {
+  margin: 0;
+  padding: 0 0 5px 5px;
+  list-style: none;
+  float: left;
+  transform: rotate(0);
+  top: 0; }
+
+#results.live {
+  top: 0;
+  position: relative;
+  opacity: 1; }
+
+#counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; }
+
+/*# sourceMappingURL=main.css.map */

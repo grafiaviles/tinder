@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proyecto Final</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+
+<main>
+    <div class="box">
+        <figure><img id="cover" src="" alt=""></figure>
+        
+        <article class="botones" id="botones">
+            <a class="icon-check" id="like"></a>
+            <a class="icon-cross" id="dislike"></a>
+        </article>   
+    </div>
+</main>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    var songs = [];
+    var song = {};
+    var like = [];
+    var dislike = [];
+    
+    $.get("https://api.spotify.com/v1/search?q=michael*&type=artist", function(data, status){
+            songs = data.artists.items;
+            $('#cover').attr("src", songs[2].images[0].url);
+    });
+            
+    $("#botones").on('click', 'a', function(){	
+        song = songs.pop();
+        $('#cover').attr("src", song.images[1].url);
+        $(this).addClass('active').siblings().removeClass('active'); 
+        if($(this).attr("id")==="like"){
+            like.push(song);      
+        }
+        else {
+            dislike.push(song);
+        }
+    });
+    $("#botones").on('mouseenter mouseleave', 'a', function(){	
+        $(this).toggleClass('hover-bottom');
+    });
+         
+});
+</script>
+<script src="js/cuter.js"></script>
+<script src="js/cuter-nt.js"></script>
+</body>
+</html>

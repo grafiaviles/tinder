@@ -1,0 +1,102 @@
+//  RESET //
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+* {
+    padding: 0;
+    margin: 0;
+    @include box-sizing(border-box);
+    font-family: $type;
+}
+body {
+    background-color: $bg;
+    font-size: 16px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    min-height: 100vh;
+}
+header, section, article, aside, div, nav, footer, hgroup, figure, menu, main, summary, figcaption, img {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, a, p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    transition: all .4s ease;
+    color: white;
+    cursor: pointer;
+}
+
+main {
+    width: 90%;
+    max-width: 400px;
+    min-width: 300px;
+    clear: both;
+    position: relative;
+    
+    .box {
+        width: $container;
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        @include border-radius(10px);
+        @include box-shadow(0 5px 0 0 rgba(0,0,0,.1));
+        overflow: hidden;
+        background-color: $bg;
+        
+        /* Imagen Interactiva */
+        figure {
+            width: $container;
+            max-width: 400px;
+            height:400px;
+            overflow: hidden;
+            background-color: white;
+            
+            img {
+                width: 100%;
+                max-width: 400px;
+                position: relative;
+                height: 100%;
+            }
+        }
+        /* Botones */
+        .botones {
+            width: $container;
+            padding: 2em 1em;
+            background-color: $color1;
+			a {
+				background-color: rgba(255, 255, 255, 0.2);
+				box-shadow: 0 0 0 0 white;
+				font-size: 1.5em;
+				display: inline-block;
+				padding: 1em;
+				outline: none;
+				border-radius: 50%;
+				transition: all .4s ease;
+			}
+			
+			a:first-child{
+				margin-right: 1em;
+			}
+			.hover-bottom{
+				background-color: transparent;
+				box-shadow: 0 0 0 2px white;
+				transition: all .4s ease;
+			}
+			.active {
+				background-color: white;
+				color: $color1;
+				transform: scale(.90);
+			}
+        }
+    }
+}
+
+
